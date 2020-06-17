@@ -147,6 +147,10 @@ def get_config(runner, raw_uri, root_uri, target=BUILDINGS, test=False):
     val_ids = val_ids[0:num_val_scenes]
     channel_order = [0, 1, 2]
 
+    # xxx
+    train_ids = ['1325']
+    val_ids = ['1332']
+
     class_config = spacenet_cfg.get_class_config()
     train_scenes = [build_scene(spacenet_cfg, id, channel_order) for id in train_ids]
     val_scenes = [build_scene(spacenet_cfg, id, channel_order) for id in val_ids]
